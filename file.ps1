@@ -9,6 +9,11 @@
             DestinationPath = $DestinationPath
             Type            = "Directory"
             DependsOn       = "[WindowsFeature]FriendlyName"
-        }  
+        }
+        windowsfeature feature1 
+        {
+            name = "web-server"
+            ensure = present
+        }
     }
 }
